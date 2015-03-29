@@ -1,0 +1,27 @@
+{
+  "name": "react-browerify-get-started",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nluo/react-browerify-get-started.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nluo/react-browerify-get-started/issues"
+  },
+  "homepage": "https://github.com/nluo/react-browerify-get-started",
+  "dependencies": {
+    "browser-sync": "^2.4.1",
+    "browserify": "^9.0.3",
+    "gulp": "^3.8.11",
+    "react": "^0.13.1",
+    "reactify": "^1.1.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
