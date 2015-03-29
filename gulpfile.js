@@ -4,33 +4,35 @@ var browserify = require('browserify'),
 	browserSync = require('browser-sync'),
 	source = require('vinyl-source-stream');
 
-gulp.task('transform', function(){
-  gulp.src('./main.js')
-    .pipe(reactify)
-    .pipe(gulp.dest('./dist'));
-});
-
 gulp.task('compile', function(){
 	var b = browserify();
 	b.transform(reactify);
-	b.add('./main.js');
+	b.add('./src/js/main.js');
 	return b.bundle()
-			.pipe(source('./main.js'))
+			.pipe(source('main.js'))
 			.pipe(gulp.dest('./dist'));
 });
+
+
 
 gulp.task('browser-sync', function(){
 	browserSync({
 		server: {
-			baseDir: './'
+			baseDir: './dist/'
 		}
 	})
 });
 
+gulp.task('copy', function(){
+	gulp.src('./index.html')
+		.pipe(gulp.dest('dist'))
+});
+
+
 // use default task to launch BrowserSync and watch JS files
-gulp.task('default', ['browser-sync'], function () {
+gulp.task('default', ['browser-sync', 'copy'], function () {
  
     // add browserSync.reload to the tasks array to make
     // all browsers reload after tasks are complete.
-    gulp.watch(["*.js", "*.jsx", "index.html", "app.css"], ['compile', browserSync.reload]);
+    gulp.watch(["./src/js/**/*.js", "./src/views/**/*.jsx", "index.html", "app.css"], ['copy', 'compile', browserSync.reload]);
 });
