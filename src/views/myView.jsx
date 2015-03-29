@@ -4,7 +4,7 @@ var MyView = React.createClass({
   render: function(){
     return (
       <div>
-        This Is My First React ~~
+        This Is My First React OKAY
       </div>
     );
   }

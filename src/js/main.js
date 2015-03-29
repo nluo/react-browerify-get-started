@@ -1,5 +1,5 @@
 var React = require('react'),
-	view =require('../views/myView.jsx');
+	view =require('../views');
 
-console.log(123);
-React.render(view(), document.getElementById('example'));
+
+React.render(view.main(), document.getElementById('example'));
