@@ -1,5 +1,6 @@
 var React = require('react'),
+	ReactDom = require('react-dom'),
 	view =require('../views');
 
 
-React.render(view.main(), document.getElementById('example'));
+ReactDom.render(view.main(), document.getElementById('example'));

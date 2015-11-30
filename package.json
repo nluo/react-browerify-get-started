@@ -20,7 +20,8 @@
     "browser-sync": "^2.4.1",
     "browserify": "^9.0.3",
     "gulp": "^3.8.11",
-    "react": "^0.13.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
     "reactify": "^1.1.0",
     "vinyl-source-stream": "^1.1.0"
   }
